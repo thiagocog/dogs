@@ -7,9 +7,8 @@ const ProtectedRoute = (props) => {
   const { login } = React.useContext(UserContext)
 
   if (login) return <Route {...props} />
-  else return <Navigate to='/login' />
-  // else if (login === false) return <Navigate to='/login' />
-  // else return null
+  else if (login === false) return <Navigate to='/login' />
+  else return null
 }
 
 export default ProtectedRoute
