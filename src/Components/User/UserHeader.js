@@ -7,10 +7,11 @@ const UserHeader = () => {
 
   const [title, setTitle] = React.useState('')
   const { pathname } = useLocation()
+  
   React.useEffect(() => {
     switch (pathname) {
       case '/conta':
-        setTitle('My Feed')
+        setTitle('Feed')
         break
       case '/conta/estatisticas':
         setTitle('Stats')
