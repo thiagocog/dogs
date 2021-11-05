@@ -6,7 +6,7 @@ import { PHOTOS_GET } from '../../api'
 import Error from '../Helper/Error'
 import Loading from '../Helper/Loading'
 
-const FeedPhotos = () => {
+const FeedPhotos = ({ setModalPhoto }) => {
 
   const { data, loading, error, request } = useFetch()
 
@@ -26,7 +26,11 @@ const FeedPhotos = () => {
     return (
       <ul className={`${styles.feed} animeLeft`}>
         {data.map(photo => (
-          <FeedPhotosItem key={photo.id} photo={photo} />
+          <FeedPhotosItem
+            key={photo.id}
+            photo={photo}
+            setModalPhoto={setModalPhoto}
+          />
         ))}
       </ul>
     )
