@@ -27,7 +27,7 @@ export const UserStorage = ({ children }) => {
     const resJson = await response.json()
     setData(resJson)
     setLogin(true)
-    navigate('/conta')
+    // navigate('/conta')
     // console.log(resJson)
   }, [navigate])
   
