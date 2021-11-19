@@ -28,7 +28,7 @@ export const UserStorage = ({ children }) => {
     setData(resJson)
     setLogin(true)
     navigate('/conta')
-    console.log(resJson)
+    // console.log(resJson)
   }, [navigate])
   
   async function userLogin(username, password) {
@@ -38,7 +38,7 @@ export const UserStorage = ({ children }) => {
       const { url, options } = TOKEN_POST({username, password})
       const response = await fetch(url, options)
       if (!response.ok) {
-        console.log(response)
+        // console.log(response)
         throw new Error('Error: Invalid user')
       }
       const { token } = await response.json()
