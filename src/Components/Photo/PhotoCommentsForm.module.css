@@ -6,6 +6,10 @@
   /* gap: 0.5rem; */
 }
 
+.single.form {
+  margin: 1rem 0 2rem;
+}
+
 .textarea {
   display: block;
   width: 100%;

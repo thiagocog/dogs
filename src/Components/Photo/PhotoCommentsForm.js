@@ -5,7 +5,7 @@ import { COMMENT_POST } from '../../api'
 import { ReactComponent as Enviar } from '../../Assets/enviar.svg'
 import Error from '../Helper/Error'
 
-const PhotoCommentsForm = ({ id, setCommentsList }) => {
+const PhotoCommentsForm = ({ id, setCommentsList, single }) => {
 
   const token = localStorage.getItem('token')
   const [comment, setComment] = React.useState('')
@@ -25,7 +25,7 @@ const PhotoCommentsForm = ({ id, setCommentsList }) => {
   }
 
   return (
-    <form onSubmit={handleSubmit} className={styles.form}>
+    <form onSubmit={handleSubmit} className={`${styles.form} ${single ? styles.single : ''}`}>
       <textarea
         id='comment'
         name='comment'
