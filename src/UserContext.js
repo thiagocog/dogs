@@ -44,6 +44,7 @@ export const UserStorage = ({ children }) => {
       const { token } = await response.json()
       localStorage.setItem('token', token)
       await getUser(token)
+      navigate('/')
     } catch(err) {
       setError(err.message)
       setLogin(false)
