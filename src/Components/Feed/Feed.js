@@ -8,9 +8,6 @@ const Feed = ({ user }) => {
   const [pages, setPages] = React.useState([1])
   const [infinite, setInfinite] = React.useState(true)
 
-
-
-
   React.useEffect(() => {
     let wait = false
     function infiniteScroll() {
