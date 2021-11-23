@@ -6,6 +6,7 @@ import useForm from '../../Hooks/useForm'
 import useFetch from '../../Hooks/useFetch'
 import { PASSWORD_RESET } from '../../api'
 import Error from '../Helper/Error'
+import Head from '../Helper/Head'
 
 const LoginPasswordReset = () => {
 
@@ -38,6 +39,7 @@ const LoginPasswordReset = () => {
 
   return (
     <div>
+      <Head title='Reset Password' />
       <h1 className='title'>Reset password</h1>
       <form onSubmit={handleSubmit}>
         <Input label='New password' type='password' name='password' {...password} />

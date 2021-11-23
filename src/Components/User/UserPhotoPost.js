@@ -7,6 +7,7 @@ import Input from '../Forms/Input'
 import Button from '../Forms/Button'
 import { PHOTO_POST } from '../../api'
 import Error from '../Helper/Error'
+import Head from '../Helper/Head'
 
 const UserPhotoPost = () => {
 
@@ -43,6 +44,7 @@ const UserPhotoPost = () => {
 
   return (
     <section className={`${styles.photoPost} animeLeft`}>
+      <Head title='Photo Post' />
       <form onSubmit={handleSubmit}>
         <Input type='text' label='Nome' name='nome' {...nome} />
         <Input type='number' label='Peso' name='peso' {...peso} />

@@ -6,6 +6,7 @@ import { UserContext } from '../../UserContext'
 import Button from '../Forms/Button'
 import Input from '../Forms/Input'
 import Error from '../Helper/Error'
+import Head from '../Helper/Head'
 
 const LoginCreate = () => {
 
@@ -30,6 +31,7 @@ const LoginCreate = () => {
 
   return (
     <section className="animeLeft">
+      <Head title='Create Account' />
       <h1 className='title'>Cadastre-se</h1>
       <form onSubmit={handleSubmit}>
         <Input
