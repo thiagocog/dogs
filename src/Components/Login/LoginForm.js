@@ -29,22 +29,22 @@ const LoginForm = () => {
       <form className={styles.form} onSubmit={handleSubmit}>
         <Input
           type="text"
-          label="Usuário"
+          label="User"
           name="username"
           {...username}
         />
         <Input
           type="password"
-          label="Senha"
+          label="Password"
           name="password"
           {...password}
         />
-        {loading ? <Button disabled>Carregando...</Button> : <Button>Entrar</Button>}
+        {loading ? <Button disabled>Loading...</Button> : <Button>Login</Button>}
         <Error error={error} />
       </form>
-      <Link to='/login/perdeu' className={styles.perdeu}>Perdeu a senha?</Link>
+      <Link to='/login/perdeu' className={styles.perdeu}>Lost your password?</Link>
       <div className={styles.cadastro}>
-        <h2 className={styles.subtitle}>Cadastre-se</h2>
+        <h2 className={styles.subtitle}>Sign Up</h2>
         <p>Ainda não possui conta? Cadastre-se no site.</p>
         <Link to='/login/criar' className={stylesBtn.button}>Cadastro</Link>
       </div>
